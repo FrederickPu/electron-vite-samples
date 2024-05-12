@@ -68,7 +68,7 @@ function bindingSqlite3(options: {
       /** `dist-native/better_sqlite3.node` */
       const BETTER_SQLITE3_BINDING = better_sqlite3_copy.replace(resolvedRoot + '/', '')
       fs.writeFileSync(
-        path.join(resolvedRoot, '.env'),
+        resolvedRoot,
         `
 VITE_BETTER_SQLITE3_BINDING=${BETTER_SQLITE3_BINDING}
 VITE_COMMAND=${options.command}
